@@ -3,6 +3,7 @@
 // 3) Split the code into 3 widget : App , TextControl & Text( TextOutput )
 
 import 'package:flutter/material.dart';
+import './text_output.dart';
 
 main() {
   runApp(AssigmentApp());
@@ -16,7 +17,17 @@ class AssigmentApp extends StatelessWidget {
           appBar: AppBar(
             title: Text('Assignment 01'),
           ),
-          body: Text('Hello World')
+          body: Column(
+            children: <Widget>[
+              TextOutput(),
+              RaisedButton(
+                child: Text('Change Text'),
+                onPressed: () {
+                  print('Button Clicked');
+                },
+              )
+            ],
+          )
         ),
       );
     }
