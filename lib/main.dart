@@ -11,9 +11,13 @@ main() {
 class AssigmentApp extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
-      return new Text(
-        'Hello World',
-        textDirection: TextDirection.ltr,
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Assignment 01'),
+          ),
+          body: Text('Hello World')
+        ),
       );
     }
 }
