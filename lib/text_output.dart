@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class TextOutput extends StatelessWidget {
 
   final String displayText;
-  TextOutput({this.displayText = 'Default Text' });
+  TextOutput({this.displayText = 'Default Text' }) {
+    print(displayText);
+  }
 
   @override
     Widget build(BuildContext context) {

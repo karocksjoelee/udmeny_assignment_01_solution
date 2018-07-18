@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import './text_output.dart';
+import './text_control.dart';
 
 main() {
   runApp(AssigmentApp());
@@ -20,12 +21,7 @@ class AssigmentApp extends StatelessWidget {
           body: Column(
             children: <Widget>[
               TextOutput(),
-              RaisedButton(
-                child: Text('Change Text'),
-                onPressed: () {
-                  print('Button Clicked');
-                },
-              )
+              TextControl()
             ],
           )
         ),
