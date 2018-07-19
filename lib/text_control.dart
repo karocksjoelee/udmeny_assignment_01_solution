@@ -10,13 +10,13 @@ class TextControl extends StatefulWidget {
 }
 
 class _TextControlState extends State {
-  String controlText;
+  String _controlText;
   int _counter = 0;
 
   @override
   void initState() {
     // ! cannot fix this
-    controlText = 'Default Text from controlText';
+    _controlText = 'Default Text from controlText';
     super.initState();
   }
 
@@ -25,15 +25,15 @@ class _TextControlState extends State {
     // TODO: implement build
     return Column(
       children: <Widget>[
-        TextOutput(displayText: controlText),
+        TextOutput(displayText: _controlText),
         Container(
           margin: EdgeInsets.all(20.0),
           child: RaisedButton(
             child: Text('Change Text'),
             onPressed: () {
               setState(() {
-                controlText = 'Changed Text $_counter';
                 _counter ++;
+                _controlText = 'Changed Text $_counter';
               });
             },
           ),
